@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Kata {
+public class EqualSidesOfAnArray {
     public static int findEvenIndex(int[] array){
         List<Integer> list = Arrays.stream(array)
                 .boxed()
@@ -25,6 +25,6 @@ public class Kata {
     }
 
     public static void main(String[] args) {
-        System.out.println(Kata.findEvenIndex(new int[]{1, 2, 3, 4, 3, 2, 1})); // 3
+        System.out.println(EqualSidesOfAnArray.findEvenIndex(new int[]{1, 2, 3, 4, 3, 2, 1})); // 3
     }
 }

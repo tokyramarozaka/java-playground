@@ -3,7 +3,7 @@ package algo.basics;
 import java.util.Arrays;
 import java.util.List;
 
-public class Game {
+public class SimpleCardGame {
     public static int getValue(String cardValue){
         return switch(cardValue){
             case "T" -> 10;
@@ -18,9 +18,9 @@ public class Game {
     public String winner_byRicka(String[] deckSteve, String[] deckJosh) {
         int a = 0, b = 0;
         for (int i = 0; i < deckJosh.length; i++) {
-            if(Game.getValue(deckSteve[i]) > Game.getValue(deckJosh[i]))
+            if(SimpleCardGame.getValue(deckSteve[i]) > SimpleCardGame.getValue(deckJosh[i]))
                 a++;
-            else if(Game.getValue(deckSteve[i]) < Game.getValue(deckJosh[i]))
+            else if(SimpleCardGame.getValue(deckSteve[i]) < SimpleCardGame.getValue(deckJosh[i]))
                 b++;
         }
         if(a == b)
@@ -29,7 +29,7 @@ public class Game {
         return a > b ? "Steve win " + a + " to " + b : " Josh win " + b + " to " + a;
     }
 
-    
+
     public String winner(String[] deckSteve, String[] deckJosh) {
         List<String> allCards = Arrays.asList(
                 "2","3","4","5","6","7","8","9","T","J","Q","K","A"
