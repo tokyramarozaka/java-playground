@@ -1,5 +1,7 @@
 package oop.basics;
 
+import java.util.ArrayList;
+
 public class Robot {
     int x;
     int y;
@@ -28,5 +30,10 @@ public class Robot {
             case "OUEST" -> "NORD";
             default -> this.direction;
         };
+    }
+
+
+    public static void main(String[] args) {
+
     }
 }
