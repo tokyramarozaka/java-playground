@@ -2,7 +2,7 @@ package oop.basics.banking_app;
 
 /**
  * A current account is a subclass of Account that allows you to have a negative balance up to a
- * certain limit. Therefore the debit and transfer methods should behave a bit differently to those
+ * certain limit. Therefore, the debit and transfer methods should behave a bit differently to those
  * in the superclass Account, we say that we "Override" it.
  */
 public class CurrentAccount extends Account {
@@ -19,7 +19,7 @@ public class CurrentAccount extends Account {
 
     /**
      * We override the debit method from the superclass because it differs from the one in the
-     * Acount class. We need to redefine it to take the treshold into account.
+     * Account class. We need to redefine it to take the threshold into account.
      * @param amount : the amount of money we want to withdraw from the account.
      */
     @Override
