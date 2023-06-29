@@ -1,12 +1,13 @@
-package oop.basics;
+package oop.basics.banking_app;
 
 public class Account {
     private int accountId;
     private Customer owner;
-    private double balance;
+    protected double balance;
+    // protected because CurrentAccount needs access to it directly to implement its debit method.
 
-    public Account(int accoundId, Customer owner) {
-        this.accountId = accoundId;
+    public Account(int accountId, Customer owner) {
+        this.accountId = accountId;
         this.owner = owner;
         this.balance = 0.0;
     }

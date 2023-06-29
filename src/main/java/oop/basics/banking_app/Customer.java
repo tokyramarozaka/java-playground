@@ -1,4 +1,4 @@
-package oop.basics;
+package oop.basics.banking_app;
 
 import java.time.LocalDate;
 
