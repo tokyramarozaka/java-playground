@@ -39,7 +39,7 @@ public class CurrentAccount extends Account {
      */
     @Override
     public void transferToAccount(Account target, double amount) {
-        if (hasEnoughFundsOnDebit(amount)){
+        if (this.hasEnoughFundsOnDebit(amount)){
             this.balance -= amount;
             target.credit(amount);
         }else{

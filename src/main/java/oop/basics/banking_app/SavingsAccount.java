@@ -9,7 +9,7 @@ public class SavingsAccount extends Account{
     private double interest;
 
     public SavingsAccount(int accountId, Customer owner, double interest) {
-        super(accountId, owner);
+        super(accountId, owner); // superclass, subclass
         this.interest = interest;
     }
 
