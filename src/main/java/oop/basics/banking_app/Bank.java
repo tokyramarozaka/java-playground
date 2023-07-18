@@ -23,7 +23,6 @@ public class Bank {
 
     public void update(){
         List<Account> toRemove = new ArrayList<>();
-
         for(Account account : this.open) {
             if(account instanceof SavingsAccount){
                 // we need to cast account's type to SavingsAccount to access applyInterest()
@@ -35,7 +34,6 @@ public class Bank {
                 }
             }
         }
-
         open.removeAll(toRemove);
     }
 }

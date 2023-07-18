@@ -45,6 +45,8 @@ public class Account {
         }
     }
 
+    // La classe "Object" est la mère de toutes les classes
+    // dans cette classe y a les méthodes: toString, equals
     @Override
     public String toString() {
         return "accountId=" + accountId +
