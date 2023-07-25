@@ -1,12 +1,14 @@
 package oop.basics.online_shop;
 
+import java.util.Objects;
+
 public class Electronics extends Product {
     private String brand;
     private float weightInKg;
 
     public Electronics(String name, String description, float unitPrice, String brand,
                        float weightInKg) {
-        super(name, description, unitPrice);
+        super(name, description, unitPrice); // constructeur de la classe mère.
         this.brand = brand;
         this.weightInKg = weightInKg;
     }
@@ -27,8 +29,19 @@ public class Electronics extends Product {
         this.weightInKg = weightInKg;
     }
 
-    public float getTotalPrice(){
+    @Override
+    public float getTotalPrice() {
         return this.getUnitPrice() + this.weightInKg * 15000;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!super.equals(obj)) {
+            return false;
+        }
+        Electronics other = (Electronics) obj;
+        return this.brand.equals(other.getBrand())
+                && this.weightInKg == other.getWeightInKg();
     }
 
     @Override
